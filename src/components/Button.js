@@ -2,8 +2,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ color, title, onClick }) => {
-
+const Button = ({ color, title }) => {
+    const onClick=(e)=>{
+        console.log('Click')
+    }
     return (
         <div>
             {/* <input style={{backgroundColor:props.color}} type="submit" class="btn" value="props.title" /> */}
