@@ -1,10 +1,10 @@
 import Header from './components/Header';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const name='Abdellah'
-  const x=true
+  // const name='Abdellah'
+  // const x=true
   return (
     // <div className="App">
     //   <header className="App-header">

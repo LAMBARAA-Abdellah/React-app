@@ -1,14 +1,12 @@
 
-import React from 'react'
+
 import PropTypes from 'prop-types'
 
-const Button = ({ color, title }) => {
-    const onClick=(e)=>{
-        console.log('Click')
-    }
+const Button = ({ color, title, onClick }) => {
+    
     return (
-        <div>
-            {/* <input style={{backgroundColor:props.color}} type="submit" class="btn" value="props.title" /> */}
+  
+          
             <button 
                 onClick={onClick}
                 style={{ backgroundColor: color }}
@@ -16,7 +14,7 @@ const Button = ({ color, title }) => {
                 {title}
 
             </button>
-        </div>
+
     )
 }
 Button.propTypes = {
