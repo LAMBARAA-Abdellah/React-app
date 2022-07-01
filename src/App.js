@@ -17,7 +17,7 @@ function App() {
       
     // </div>
     <div className='container'>
-      <Header title="full stack developper" />
+      <Header title="Task tracker" />
     </div>
     
   );

@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 
-export const Header = (props) => {
+export const Header = ({title}) => {
+    const
     return (
-        <div>
-            <header class='header'>
-                <h1 style={headingStyle} > {props.title}</h1>
-                <Button color='green' text='Hello' /> 
-            </header>
-           
 
-        </div>
+            <header class='header'>
+                <h1 style={headingStyle} > {title}</h1>
+                <Button color='green'  title='Add' onClick={} /> 
+            
+            </header>
+
 
     )
 }
