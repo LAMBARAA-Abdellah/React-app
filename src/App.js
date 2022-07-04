@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 // import logo from './logo.svg';
 import './App.css';
@@ -7,6 +8,9 @@ import { useState } from "react"
 function App() {
   const [showAddTask,setShowTask]=useState(false)
   const [tasks,setTasks]=useState([]) 
+  useEffect(()=>{
+     
+  })
   // const name='Abdellah'
   // const x=true*
   //delete task 
