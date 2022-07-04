@@ -5,27 +5,8 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import { useState } from "react"
 function App() {
-  const [sh]
-  const [tasks,setTasks]=useState([
-    {
-      id:1,
-      text:'doctors appointment',
-      day:'feb 5th at 2:30pm',
-      reminder:true,
-    },
-    {
-      id:2,
-      text:'doctors appointment',
-      day:'feb 5th at 2:30pm',
-      reminder:true,
-    },
-    {
-      id:3,
-      text:'doctors appointment',
-      day:'feb 5th at 2:30pm',
-      reminder:true,
-    },
-  ]) 
+  const [showAddTask,setShowTask]=useState(false)
+  const [tasks,setTasks]=useState([]) 
   // const name='Abdellah'
   // const x=true*
   //delete task 
@@ -57,8 +38,8 @@ function App() {
     // </div>
   
     <div className='container'>
-      <Header title="Task tracker" />
-      <AddTask onAdd={addTask}/>
+      <Header title="Task tracker" onAdd={()=>setShowTask(!showAddTask)} showAdd={showAddTask} />
+      {showAddTask && <AddTask onAdd={addTask}/>}
      {tasks.length>0 ? <Tasks tasks={tasks} 
      onDelete={deleteTask}
      onToggle={toggleReminder}
