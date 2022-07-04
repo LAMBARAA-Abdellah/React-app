@@ -5,7 +5,7 @@ import Button from './Button'
 export const Header = ({title}) => {
     const onClick=()=>{
         console.log('Click')
-        alert("added width succes")
+        // alert("added width succes")
     }
     return (
 

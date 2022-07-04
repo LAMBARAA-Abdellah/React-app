@@ -2,6 +2,7 @@ import Header from './components/Header';
 // import logo from './logo.svg';
 import './App.css';
 import Tasks from './components/Tasks'
+import AddTask from './components/AddTask'
 import { useState } from "react"
 function App() {
   const [tasks,setTasks]=useState([
@@ -31,6 +32,15 @@ function App() {
     console.log('delete',id)
     setTasks(tasks.filter((task)=>task.id !==id))
   }
+  //toggle reminder
+  const toggleReminder=(id)=>{
+    console.log(id)
+    setTasks(tasks.map((task)=>task.id===id?{...task,reminder:!task.reminder}:task))
+  }
+  // add task
+  const addTask=(task)=>{
+    console.log(task)
+  }
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -45,8 +55,11 @@ function App() {
   
     <div className='container'>
       <Header title="Task tracker" />
-
-     {tasks.length>0 ? <Tasks tasks={tasks} onDelete={deleteTask}/>:'No Tasks to show'}
+      <AddTask onAdd={addTask}/>
+     {tasks.length>0 ? <Tasks tasks={tasks} 
+     onDelete={deleteTask}
+     onToggle={toggleReminder}
+     />:'No Tasks to show'}
     </div>
     
   );
